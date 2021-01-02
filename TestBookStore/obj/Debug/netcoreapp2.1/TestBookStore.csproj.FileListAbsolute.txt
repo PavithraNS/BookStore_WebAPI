@@ -1,0 +1,3 @@
+C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp2.1\TestBookStore.AssemblyInfoInputs.cache
+C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp2.1\TestBookStore.AssemblyInfo.cs
+C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp2.1\TestBookStore.csproj.CoreCompileInputs.cache
