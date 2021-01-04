@@ -24,8 +24,10 @@ namespace BookStroreWebAPI.Controllers
         public IActionResult PlaceOrder()
         {
             try
-            {
-                string LoggedInUser = HttpContext.Session.GetString("LogedInUser");
+            {                
+                var claims = HttpContext.User.Claims.ToList();
+                var email = claims[0].ToString().Split("emailaddress:");
+                string LoggedInUser = email[1].Trim();
                 var result=this.orderBL.PlaceOrder(LoggedInUser);
                 if (result!=null)
                 {

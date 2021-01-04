@@ -69,9 +69,7 @@ namespace BookStroreWebAPI.Controllers
             {
                 var result = this.employeeBL.UserLogin(login);
                 if (result != null)
-                {
-                    HttpContext.Session.SetString("LogedInUser", result.email);
-                    
+                {                  
                     string token = GenrateJWTToken(result.email, result.EmployeeId);
                     return this.Ok(new
                     {

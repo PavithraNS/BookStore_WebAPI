@@ -78,9 +78,6 @@ C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\bin\Debug\netcore
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.csprojAssemblyReference.cache
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.AssemblyInfoInputs.cache
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.AssemblyInfo.cs
-C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.csproj.CoreCompileInputs.cache
-C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.RazorTargetAssemblyInfo.cache
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.csproj.CopyComplete
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\staticwebassets\TestBookStore.StaticWebAssets.Manifest.cache
@@ -88,3 +85,6 @@ C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcore
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.dll
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.pdb
 C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.genruntimeconfig.cache
+C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.csproj.CoreCompileInputs.cache
+C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Pavithra N S\source\repos\TestBookStore\TestBookStore\obj\Debug\netcoreapp3.1\TestBookStore.MvcApplicationPartsAssemblyInfo.cache

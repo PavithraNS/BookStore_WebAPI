@@ -13,7 +13,7 @@ namespace BookStroreWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductBL productBL;

@@ -62,7 +62,7 @@ namespace RepositoryLayer.Services
                                           product_id = e.product_id,
                                           quantityToBuy = e.quantityToBuy,
                                           loginUser = e.loginUser
-            }).Where(x=>x.loginUser== LoggedInUser).ToList<CartItem>();
+            }).Where(x=>x.loginUser==LoggedInUser).ToList<CartItem>();
                 foreach(CartItem item in list)
                 {
                     var res = this.context.products.Where(x =>

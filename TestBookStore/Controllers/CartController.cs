@@ -17,6 +17,7 @@ namespace BookStroreWebAPI.Controllers
     [ApiController]
     public class CartController : ControllerBase
     {
+
         private readonly ICartBL cartBL;
         IConfiguration configuration;
 
@@ -30,8 +31,11 @@ namespace BookStroreWebAPI.Controllers
         {
             try
             {
-                string LoggedInUser=HttpContext.Session.GetString("LogedInUser");
-                cart.loginUser = LoggedInUser;
+                //string LoggedInUser=HttpContext.Session.GetString("LogedInUser");
+                var claims = HttpContext.User.Claims.ToList();
+                var email = claims[0].ToString().Split("emailaddress:");
+                cart.loginUser = email[1].Trim();
+                
                 if (this.cartBL.AddCart(cart))
                 {
                     return this.Ok(new { success = true, Message = "CartItem added successfully" });
@@ -64,8 +68,10 @@ namespace BookStroreWebAPI.Controllers
         {
             try
             {
-                string LoggedInUser = HttpContext.Session.GetString("LogedInUser");
-                cart.loginUser = LoggedInUser;
+                //string LoggedInUser = HttpContext.Session.GetString("LogedInUser");
+                var claims = HttpContext.User.Claims.ToList();
+                var email = claims[0].ToString().Split("emailaddress:");
+                cart.loginUser = email[1].Trim();
                 if (this.cartBL.UpdateCart(cart))
                 {
                     return this.Ok(new { success = true, Message = "CartItem Updated successfully" });
@@ -97,10 +103,10 @@ namespace BookStroreWebAPI.Controllers
         public IActionResult GetCartItems()
         {
             try
-            {
-                string LoggedInUser = HttpContext.Session.GetString("LogedInUser");
-                //cart.loginUser = LoggedInUser;
-                var result=this.cartBL.GetCartItems(LoggedInUser);
+            {               
+                var claims=HttpContext.User.Claims.ToList();
+                var email = claims[0].ToString().Split("emailaddress:");
+                var result=this.cartBL.GetCartItems(email[1].Trim());
                 if (result!=null)
                 {
                     return this.Ok(new { success = true, Message = "fetching All CardItems",result });
@@ -134,8 +140,10 @@ namespace BookStroreWebAPI.Controllers
             try
             {
                 CartItem cart = new CartItem();
-                string LoggedInUser = HttpContext.Session.GetString("LogedInUser");
-                cart.loginUser = LoggedInUser;
+                //string LoggedInUser = HttpContext.Session.GetString("LogedInUser");
+                var claims = HttpContext.User.Claims.ToList();
+                var email = claims[0].ToString().Split("emailaddress:");
+                cart.loginUser = email[1].Trim();
                 cart.product_id = productId;
                 if (this.cartBL.RemoveCartItem(cart))
                 {
@@ -170,8 +178,10 @@ namespace BookStroreWebAPI.Controllers
             try
             {
                 CartItem cart = new CartItem();
-                string LoggedInUser = HttpContext.Session.GetString("LogedInUser");
-                cart.loginUser = LoggedInUser;
+                //string LoggedInUser = HttpContext.Session.GetString("LogedInUser");
+                var claims = HttpContext.User.Claims.ToList();
+                var email = claims[0].ToString().Split("emailaddress:");
+                cart.loginUser = email[1].Trim();
                 cart.quantityToBuy = quantityToRemove;
                 cart.product_id = productId;
                 if (this.cartBL.ReduceBookQuantity(cart))
