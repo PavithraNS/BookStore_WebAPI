@@ -16,7 +16,7 @@ namespace BusinessLayer.Services
             this.cartRL = adminRL;
         }
 
-        public List<Product> GetCartItems(string LoggedInUser)
+        public List<CartItem> GetCartItems(string LoggedInUser)
         {
             try
             {

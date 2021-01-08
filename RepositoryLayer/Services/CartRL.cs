@@ -50,9 +50,9 @@ namespace RepositoryLayer.Services
             }
         }
 
-        public List<Product> GetCartItems(string LoggedInUser)
+        public List<CartItem> GetCartItems(string LoggedInUser)
         {
-            List<Product> products = new List<Product>();
+            List<CartItem> products = new List<CartItem>();
             try
             {
              
@@ -68,8 +68,8 @@ namespace RepositoryLayer.Services
                     var res = this.context.products.Where(x =>
                                                     x.product_id == item.product_id
                                                 ).FirstOrDefault();
-                    
-                    products.Add(res);
+                    item.Product = res;
+                    products.Add(item);
                 }
                 
 
