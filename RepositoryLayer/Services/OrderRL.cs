@@ -25,6 +25,7 @@ namespace RepositoryLayer.Services
                                          {
                                               product_id = e.product_id,
                                               quantityToBuy = e.quantityToBuy,
+                                               Product=e.Product,
                                               loginUser = e.loginUser
                                          }).Where(x => x.loginUser == LoggedInUser).ToList<CartItem>();
                 CustomerDetails customer = this.context.customerDetails.Find(x=>x.email==LoggedInUser).FirstOrDefault();
