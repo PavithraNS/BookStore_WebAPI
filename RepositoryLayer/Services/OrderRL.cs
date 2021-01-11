@@ -31,11 +31,12 @@ namespace RepositoryLayer.Services
                 CustomerDetails customer = this.context.customerDetails.Find(x=>x.email==LoggedInUser).FirstOrDefault();
                 
                 NewOrder newOrder = new NewOrder();
-                newOrder.orders = list;
+               // newOrder.orders = list;
                 newOrder.customer = customer;
                 newOrder.customer.CustomerId = customer.CustomerId;
                 this.context.Add(newOrder);
                int result=this.context.SaveChanges();
+               newOrder.orders = list;
                 if (newOrder.orders != null && result>0)
                 {
                     return newOrder;
